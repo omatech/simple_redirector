@@ -53,6 +53,11 @@ Following our previous example:
 php artisan simple_redirector:load storage/sample/redirects.csv --refresh
 ```
 
-**IMPORTANT:** If you don't load any original_uri at all or if the url parsed is not in the database the user will be redirected to the root of REDIRECT_DESTINATION_DOMAIN anyway.
+# Behaviour config
+
+There are two more config variables you can set in the .env file
+
+REDIRECT_HOME_URI - default / you can change that if for example your home page is /home/index.html or anytihing else to avoid redirection loops once the destination is reached. (starts with slash)
+CHECK_EXISTENCE_BEFORE_REDIRECT - Default false, this adds an additional roundtrip but checks if the destination url is valid, if it's not then the redirection will be made to the REDIRECT_HOME_URI
 
 You can change the behaviour of the redirection login in web.php
