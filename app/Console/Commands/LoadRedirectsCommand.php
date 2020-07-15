@@ -63,11 +63,13 @@ class LoadRedirectsCommand extends Command
 
         $result=array();
         $parsed=array();
+
+        //print_r($rows);die;
         foreach ($rows as $row)
         {
             if (!in_array($row['original_uri'], $parsed))
             {
-                $result[]=$row;
+                $result[]=['original_uri'=>$row['original_uri'], 'redirect_uri'=>$row['redirect_uri']];
                 $parsed[]=$row['original_uri'];
             }
         }
