@@ -57,7 +57,10 @@ php artisan simple_redirector:load storage/sample/redirects.csv --refresh
 
 There are two more config variables you can set in the .env file
 
+```
 REDIRECT_HOME_URI - default / you can change that if for example your home page is /home/index.html or anytihing else to avoid redirection loops once the destination is reached. (starts with slash)
+
 CHECK_EXISTENCE_BEFORE_REDIRECT - Default false, this adds an additional roundtrip but checks if the destination url is valid, if it's not then the redirection will be made to the REDIRECT_HOME_URI
+```
 
 You can change the behaviour of the redirection login in web.php

@@ -1,10 +1,13 @@
 {
-    "name": "laravel/laravel",
+    "name": "omatech/simple_redirector",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "The simplest way to redirect urls",
     "keywords": [
         "framework",
-        "laravel"
+        "laravel",
+        "redirect",
+        "301",
+        "migration"
     ],
     "license": "MIT",
     "require": {
